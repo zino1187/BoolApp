@@ -10,9 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var la_bool: UILabel!
+    var flag:Bool = false
+    
+    @IBAction func showBool(_ sender: Any) {
+        flag = !flag
+        la_bool.text = String(flag)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        la_bool.text = String(flag)
     }
 
 
